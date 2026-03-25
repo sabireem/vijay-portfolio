@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vijay Rahavan A — Senior Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Vijay Rahavan A, a Senior Data Analyst with 3.5+ years of experience in SQL, Data Engineering, ML, and Analytics. Expertise in Tableau, Power BI, AWS, GCP, and ETL pipelines.">
+  <meta name="author" content="Vijay Rahavan A">
+  <meta property="og:title" content="Vijay Rahavan A — Senior Data Analyst">
+  <meta property="og:description" content="Senior Data Analyst with 3.5+ years in SQL, Data Engineering, ML, and Analytics.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#FFFDF7">
+
+  <!-- Fonts: Space Grotesk (bold display) + DM Mono (raw body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ═══════ LOADER ═══════ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__ring">
+      <div class="loader__dot"></div>
+      <div class="loader__dot"></div>
+      <div class="loader__dot"></div>
+    </div>
+  </div>
+
+  <!-- ═══════ NAVBAR ═══════ -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span>VR<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="navbar__links" id="navLinks" role="menubar">
+        <li role="none"><a href="#about" role="menuitem">About</a></li>
+        <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+        <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#certifications" role="menuitem">Certifications</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <button id="themeToggle" class="btn-icon" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn btn--primary btn--sm navbar__cta">Let's Talk</a>
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ═══════ HERO ═══════ -->
+    <section id="hero" class="hero">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="hero__greeting reveal-up">Hello, I'm</p>
+        <h1 class="hero__name reveal-up">Vijay Rahavan <span class="text-gradient">A</span></h1>
+        <p class="hero__title reveal-up">
+          <span id="typingText" class="typing-text"></span><span class="typing-cursor" aria-hidden="true">|</span>
+        </p>
+        <p class="hero__description reveal-up">
+          Turning raw data into strategic insights. 3.5+ years crafting scalable pipelines, predictive models, and dashboards that drive $M decisions.
+        </p>
+        <div class="hero__cta reveal-up">
+          <a href="#contact" class="btn btn--primary btn--lg">
+            <i class="fa-solid fa-paper-plane"></i> Get in Touch
+          </a>
+          <a href="https://drive.google.com/file/d/1kT4wOyYjXmcI-eXvx6LU5ih3u_ECSeOz/view?usp=sharing" class="btn btn--outline btn--lg" id="resumeBtn" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+        </div>
+        <div class="hero__stats reveal-up">
+          <div class="stat">
+            <span class="stat__number">3.5+</span>
+            <span class="stat__label">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">15+</span>
+            <span class="stat__label">Projects Delivered</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">5+</span>
+            <span class="stat__label">ML Models in Prod</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+        <div class="scroll-indicator">
+          <div class="scroll-indicator__dot"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ═══════ ABOUT ═══════ -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section__title reveal-up">
+          <span class="section__number">01.</span> About Me
+        </h2>
+        <div class="about__grid">
+          <div class="about__text reveal-up">
+            <p>
+              I'm a <strong>Senior Data Analyst</strong> with a passion for transforming complex datasets into clear, actionable business strategies. Over the past 3.5+ years, I've built end-to-end data solutions spanning <strong>ETL pipelines</strong>, <strong>machine learning models</strong>, and <strong>executive dashboards</strong>.
+            </p>
+            <p>
+              My experience spans industries from <strong>retail e-commerce</strong> to <strong>financial services</strong>, where I've delivered solutions in pricing optimization, demand forecasting, and inventory management. I combine strong engineering fundamentals (Python, SQL, Spark) with deep analytics expertise (Tableau, Power BI) to bridge the gap between raw data and business outcomes.
+            </p>
+            <p>
+              Currently at <strong>Ace Turtle</strong>, I architect data pipelines on GCP and build automated reporting systems that power real-time decision making across the organization.
+            </p>
+          </div>
+          <div class="about__badges reveal-up">
+            <h3 class="about__badges-title">Technologies I Work With</h3>
+            <div class="badge-grid">
+              <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="badge"><i class="fa-solid fa-database"></i> SQL</span>
+              <span class="badge"><i class="fa-brands fa-aws"></i> AWS</span>
+              <span class="badge"><i class="fa-brands fa-google"></i> GCP</span>
+              <span class="badge"><i class="fa-solid fa-chart-line"></i> Tableau</span>
+              <span class="badge"><i class="fa-solid fa-chart-pie"></i> Power BI</span>
+              <span class="badge"><i class="fa-solid fa-brain"></i> ML/AI</span>
+              <span class="badge"><i class="fa-solid fa-wind"></i> Airflow</span>
+              <span class="badge"><i class="fa-solid fa-snowflake"></i> Snowflake</span>
+              <span class="badge"><i class="fa-solid fa-fire"></i> Spark</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ EXPERIENCE ═══════ -->
+    <section id="experience" class="section experience">
+      <div class="container">
+        <h2 class="section__title reveal-up">
+          <span class="section__number">02.</span> Experience
+        </h2>
+
+        <div class="timeline">
+          <!-- Role 1 -->
+          <div class="timeline__item reveal-up">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card glass-card">
+              <div class="timeline__header">
+                <div>
+                  <h3 class="timeline__role">Senior Data Analyst</h3>
+                  <p class="timeline__company">Ace Turtle</p>
+                </div>
+                <span class="timeline__date">2025 — Present</span>
+              </div>
+              <ul class="timeline__achievements">
+                <li>Designed and deployed <strong>production-grade data pipelines</strong> using GCP (BigQuery, Cloud Functions) and Apache Airflow, processing 2M+ records daily.</li>
+                <li>Automated ETL workflows reducing manual reporting time by <strong>60%</strong> and enabling real-time inventory tracking across 100+ retail stores.</li>
+                <li>Built interactive <strong>Power BI dashboards</strong> for C-suite stakeholders, driving data-informed inventory replenishment strategies.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span>GCP</span><span>Airflow</span><span>BigQuery</span><span>Power BI</span><span>Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="timeline__item reveal-up">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card glass-card">
+              <div class="timeline__header">
+                <div>
+                  <h3 class="timeline__role">Data Analyst</h3>
+                  <p class="timeline__company">Customer Centria</p>
+                </div>
+                <span class="timeline__date">2023 — 2025</span>
+              </div>
+              <ul class="timeline__achievements">
+                <li>Developed <strong>ML forecasting models</strong> (XGBoost, LSTM, Prophet) achieving 92% accuracy for financial revenue prediction.</li>
+                <li>Led pricing optimization initiative using regression models, improving gross margins by <strong>8%</strong> across product lines.</li>
+                <li>Engineered Redshift data warehouse and built <strong>automated Power BI reports</strong> consumed by 50+ business users daily.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span>XGBoost</span><span>LSTM</span><span>Prophet</span><span>Redshift</span><span>Power BI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="timeline__item reveal-up">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card glass-card">
+              <div class="timeline__header">
+                <div>
+                  <h3 class="timeline__role">Decision Scientist</h3>
+                  <p class="timeline__company">Mu Sigma</p>
+                </div>
+                <span class="timeline__date">2022 — 2023</span>
+              </div>
+              <ul class="timeline__achievements">
+                <li>Built <strong>sales forecasting models</strong> (ARIMA, Random Forest) for a Fortune 500 CPG client, reducing forecast error by 15%.</li>
+                <li>Developed inventory optimization algorithms saving an estimated <strong>$2M annually</strong> in carrying costs.</li>
+                <li>Created automated data validation pipelines ensuring <strong>99.5% data quality</strong> across enterprise data lakes.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span>ARIMA</span><span>Random Forest</span><span>Python</span><span>SQL</span><span>R</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ PROJECTS ═══════ -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section__title reveal-up">
+          <span class="section__number">03.</span> Featured Projects
+        </h2>
+        <div class="projects__grid">
+
+          <article class="project-card glass-card reveal-up" tabindex="0">
+            <div class="project-card__icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3 class="project-card__title">Financial Revenue Forecasting</h3>
+            <p class="project-card__desc">Built an ensemble ML model (XGBoost + LSTM + Prophet) to forecast quarterly revenue with 92% accuracy, enabling proactive budget allocation for a $50M portfolio.</p>
+            <div class="project-card__tags">
+              <span>XGBoost</span><span>LSTM</span><span>Prophet</span><span>Python</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" aria-label="View project details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card glass-card reveal-up" tabindex="0">
+            <div class="project-card__icon"><i class="fa-solid fa-tags"></i></div>
+            <h3 class="project-card__title">Dynamic Pricing Optimization</h3>
+            <p class="project-card__desc">Designed a regression-based pricing engine that analyzed competitor data, demand elasticity, and seasonality to optimize product prices, increasing margins by 8%.</p>
+            <div class="project-card__tags">
+              <span>Regression</span><span>Python</span><span>SQL</span><span>Tableau</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" aria-label="View project details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card glass-card reveal-up" tabindex="0">
+            <div class="project-card__icon"><i class="fa-solid fa-cloud"></i></div>
+            <h3 class="project-card__title">GCP Real-Time Data Pipeline</h3>
+            <p class="project-card__desc">Architected a fully automated ETL system on Google Cloud using BigQuery, Cloud Functions, and Airflow — processing 2M+ daily records with 99.9% uptime.</p>
+            <div class="project-card__tags">
+              <span>GCP</span><span>BigQuery</span><span>Airflow</span><span>Python</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" aria-label="View project details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card glass-card reveal-up" tabindex="0">
+            <div class="project-card__icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+            <h3 class="project-card__title">Inventory Optimization Engine</h3>
+            <p class="project-card__desc">Developed an ARIMA + Random Forest hybrid model to optimize inventory levels across 100+ retail stores, reducing carrying costs by an estimated $2M annually.</p>
+            <div class="project-card__tags">
+              <span>ARIMA</span><span>Random Forest</span><span>R</span><span>SQL</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" aria-label="View project details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card glass-card reveal-up" tabindex="0">
+            <div class="project-card__icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3 class="project-card__title">Executive Analytics Dashboard</h3>
+            <p class="project-card__desc">Designed a Power BI dashboard suite consumed by 50+ stakeholders daily, featuring real-time KPIs, drill-down analysis, and automated anomaly alerts.</p>
+            <div class="project-card__tags">
+              <span>Power BI</span><span>SQL</span><span>DAX</span><span>Python</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" aria-label="View project details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card glass-card reveal-up" tabindex="0">
+            <div class="project-card__icon"><i class="fa-solid fa-language"></i></div>
+            <h3 class="project-card__title">NLP Sentiment Analysis Pipeline</h3>
+            <p class="project-card__desc">Built a customer review sentiment classifier using Scikit-learn and NLP techniques (TF-IDF, Word2Vec), achieving 89% F1 score across 500K+ reviews.</p>
+            <div class="project-card__tags">
+              <span>NLP</span><span>Scikit-learn</span><span>Python</span><span>Pandas</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" aria-label="View project details"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ SKILLS ═══════ -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2 class="section__title reveal-up">
+          <span class="section__number">04.</span> Skills & Expertise
+        </h2>
+        <div class="skills__grid">
+
+          <div class="skills__category glass-card reveal-up">
+            <div class="skills__category-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Data Engineering</h3>
+            <div class="skill-bar" data-skill="SQL / PostgreSQL" data-level="95"></div>
+            <div class="skill-bar" data-skill="Snowflake / Redshift" data-level="88"></div>
+            <div class="skill-bar" data-skill="Apache Spark / Hadoop" data-level="80"></div>
+            <div class="skill-bar" data-skill="Apache Airflow" data-level="85"></div>
+            <div class="skill-bar" data-skill="ETL Pipelines" data-level="90"></div>
+          </div>
+
+          <div class="skills__category glass-card reveal-up">
+            <div class="skills__category-icon"><i class="fa-solid fa-cloud"></i></div>
+            <h3>Cloud Platforms</h3>
+            <div class="skill-bar" data-skill="Google Cloud (GCP)" data-level="88"></div>
+            <div class="skill-bar" data-skill="AWS (S3, Redshift, Lambda)" data-level="82"></div>
+            <div class="skill-bar" data-skill="BigQuery" data-level="90"></div>
+            <div class="skill-bar" data-skill="Cloud Functions" data-level="78"></div>
+          </div>
+
+          <div class="skills__category glass-card reveal-up">
+            <div class="skills__category-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Machine Learning</h3>
+            <div class="skill-bar" data-skill="Scikit-learn" data-level="88"></div>
+            <div class="skill-bar" data-skill="Pandas / NumPy" data-level="92"></div>
+            <div class="skill-bar" data-skill="XGBoost / Random Forest" data-level="85"></div>
+            <div class="skill-bar" data-skill="Time Series (ARIMA, Prophet)" data-level="82"></div>
+            <div class="skill-bar" data-skill="NLP (TF-IDF, Word2Vec)" data-level="75"></div>
+          </div>
+
+          <div class="skills__category glass-card reveal-up">
+            <div class="skills__category-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3>Visualization & BI</h3>
+            <div class="skill-bar" data-skill="Tableau" data-level="90"></div>
+            <div class="skill-bar" data-skill="Power BI / DAX" data-level="92"></div>
+            <div class="skill-bar" data-skill="Qlik Sense" data-level="72"></div>
+            <div class="skill-bar" data-skill="Looker" data-level="70"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ CERTIFICATIONS ═══════ -->
+    <section id="certifications" class="section certifications">
+      <div class="container">
+        <h2 class="section__title reveal-up">
+          <span class="section__number">05.</span> Certifications
+        </h2>
+        <div class="certs__grid">
+
+          <div class="cert-card glass-card reveal-up">
+            <div class="cert-card__icon"><i class="fa-brands fa-google"></i></div>
+            <h3>Google Data Analytics Professional</h3>
+            <p>Google / Coursera</p>
+          </div>
+
+          <div class="cert-card glass-card reveal-up">
+            <div class="cert-card__icon"><i class="fa-brands fa-aws"></i></div>
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p>Amazon Web Services</p>
+          </div>
+
+          <div class="cert-card glass-card reveal-up">
+            <div class="cert-card__icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Tableau Desktop Specialist</h3>
+            <p>Tableau / Salesforce</p>
+          </div>
+
+          <div class="cert-card glass-card reveal-up">
+            <div class="cert-card__icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3>Power BI Data Analyst Associate</h3>
+            <p>Microsoft</p>
+          </div>
+
+          <div class="cert-card glass-card reveal-up">
+            <div class="cert-card__icon"><i class="fa-brands fa-python"></i></div>
+            <h3>Python for Data Science</h3>
+            <p>IBM / Coursera</p>
+          </div>
+
+          <div class="cert-card glass-card reveal-up">
+            <div class="cert-card__icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Machine Learning Specialization</h3>
+            <p>Stanford / Coursera</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ CONTACT ═══════ -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section__title reveal-up">
+          <span class="section__number">06.</span> Get in Touch
+        </h2>
+        <p class="contact__subtitle reveal-up">
+          I'm currently open to new opportunities. Whether you have a question, a project idea, or just want to connect — my inbox is always open.
+        </p>
+
+        <div class="contact__grid">
+          <form id="contactForm" class="contact__form glass-card reveal-up" novalidate>
+            <div class="form-group">
+              <label for="contactName">Name <span class="required">*</span></label>
+              <input type="text" id="contactName" name="name" placeholder="Your name…" required autocomplete="name" spellcheck="false">
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email <span class="required">*</span></label>
+              <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required autocomplete="email" spellcheck="false">
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message <span class="required">*</span></label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Your message…" required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg btn--full">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+
+          <div class="contact__info reveal-up">
+            <div class="contact__card glass-card">
+              <div class="contact__card-icon"><i class="fa-solid fa-envelope"></i></div>
+              <h3>Email</h3>
+              <a href="mailto:vijayrahavan@example.com">vijayrahavan@example.com</a>
+            </div>
+            <div class="contact__card glass-card">
+              <div class="contact__card-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/vijay-rahavan-a-44b28b194/" target="_blank" rel="noopener noreferrer">linkedin.com/in/vijayrahavan</a>
+            </div>
+
+            <div class="contact__card glass-card">
+              <div class="contact__card-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <h3>Location</h3>
+              <p>India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="navbar__logo">
+          <span class="logo-bracket">&lt;</span>VR<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p>Designed & Built by Vijay Rahavan A</p>
+      </div>
+      <div class="footer__socials">
+        <a href="https://www.linkedin.com/in/vijay-rahavan-a-44b28b194/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:vijayrahavan@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p class="footer__copy">&copy; 2025 Vijay Rahavan A. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
